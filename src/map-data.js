@@ -34,8 +34,8 @@ export const tiles = [
   [G,  G,  FN, FN, FN, FN, FN, FN, FN, G,  FN, FN, FN, FN, FN, FN, FN, G,  FN, FN, FN, FN, FN, FN, FN, FN, G,  G,  G,  G ],
   // Row 4: space
   [G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
-  // Row 5: sign row
-  [G,  G,  G,  SN, G,  G,  G,  G,  G,  G,  G,  SN, G,  G,  G,  G,  G,  G,  G,  SN, G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
+  // Row 5: space
+  [G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
   // Row 6: space before roofs
   [G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
   // Row 7: roofs — Building 1 (cols 4-8), Building 2 (cols 12-16), Building 3 (cols 20-24)

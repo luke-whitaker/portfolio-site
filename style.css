@@ -1,0 +1,232 @@
+/* === Reset & Base === */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+/* === Canvas === */
+#game {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  width: 100vw;
+  height: auto;
+  max-width: 960px;
+  max-height: 640px;
+  display: block;
+  border: 4px solid #3a4466;
+  border-radius: 2px;
+}
+
+/* Responsive: fill viewport while maintaining aspect ratio */
+@media (min-aspect-ratio: 3/2) {
+  #game {
+    width: auto;
+    height: 100vh;
+    max-height: 640px;
+  }
+}
+
+/* === Title Screen === */
+#title-screen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: opacity 0.5s ease;
+}
+
+#title-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#title-screen h1 {
+  color: #f8f8f0;
+  font-size: 2.5rem;
+  font-family: monospace;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 0 #3a4466;
+}
+
+#title-screen h2 {
+  color: #88c8f8;
+  font-size: 1rem;
+  font-family: monospace;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: normal;
+}
+
+#title-screen .blink {
+  color: #f8f8f0;
+  font-size: 1rem;
+  font-family: monospace;
+  animation: blink 1.2s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* === Project Overlay === */
+#overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(26, 26, 46, 0.97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+#overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay-card {
+  background: #2a2a4a;
+  border: 4px solid #88c8f8;
+  border-radius: 4px;
+  padding: 2rem;
+  max-width: 520px;
+  width: 90%;
+  color: #f8f8f0;
+  font-family: monospace;
+}
+
+.overlay-card h2 {
+  font-size: 1.5rem;
+  color: #f8f8f0;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.overlay-card .subtitle {
+  font-size: 0.85rem;
+  color: #88c8f8;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.overlay-card .desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e8f0e0;
+  margin-bottom: 1rem;
+}
+
+.overlay-card .tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.overlay-card .tag {
+  background: #1a1a2e;
+  color: #88c8f8;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 2px;
+  border: 1px solid #88c8f8;
+}
+
+.overlay-card a {
+  display: inline-block;
+  color: #1a1a2e;
+  background: #88c8f8;
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  border-radius: 2px;
+  transition: background 0.15s;
+}
+
+.overlay-card a:hover {
+  background: #5898c8;
+}
+
+.overlay-card .esc-hint {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  color: #88c8f8;
+  opacity: 0.7;
+}
+
+/* === Dialogue Box === */
+#dialogue-box {
+  position: fixed;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2a2a4a;
+  border: 3px solid #f8f8f0;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  max-width: 440px;
+  width: 85%;
+  color: #f8f8f0;
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  white-space: pre-wrap;
+}
+
+#dialogue-box.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#dialogue-box .hint {
+  display: block;
+  text-align: right;
+  font-size: 0.65rem;
+  color: #88c8f8;
+  opacity: 0.6;
+  margin-top: 0.4rem;
+}
+
+/* === Mobile touch hint === */
+@media (max-width: 600px) {
+  #title-screen h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  #title-screen h2 {
+    font-size: 0.8rem;
+  }
+  .overlay-card {
+    padding: 1.25rem;
+  }
+}

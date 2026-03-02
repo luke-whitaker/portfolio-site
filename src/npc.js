@@ -3,7 +3,7 @@ import { generateNPCSprite } from './sprites.js';
 
 export const NPC_DATA = [
   {
-    col: 4, row: 11,
+    col: 4, row: 10,
     variant: 0,
     lines: [
       "Welcome to the Stats Lab!",
@@ -12,7 +12,7 @@ export const NPC_DATA = [
     ],
   },
   {
-    col: 12, row: 8,
+    col: 12, row: 10,
     variant: 1,
     lines: [
       "This is the Corpus Explorer!",
@@ -21,7 +21,7 @@ export const NPC_DATA = [
     ],
   },
   {
-    col: 20, row: 11,
+    col: 20, row: 10,
     variant: 2,
     lines: [
       "Ah, the Notebook Library!",

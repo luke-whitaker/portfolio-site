@@ -82,7 +82,6 @@ portfolio-site/
 - [ ] Custom domain setup
 - [ ] Analytics integration to track which projects visitors explore
 
-Then open http://localhost:8080.
 
 ## License
 

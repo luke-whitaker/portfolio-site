@@ -12,7 +12,7 @@ export const NPC_DATA = [
     ],
   },
   {
-    col: 12, row: 11,
+    col: 12, row: 10,
     variant: 1,
     lines: [
       "This is the Corpus Explorer!",

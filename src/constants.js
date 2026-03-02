@@ -70,7 +70,7 @@ export const PAL = {
   skin:     '#f8c898',
   skinDk:   '#d8a070',
   hair:     '#483818',
-  shirt:    '#3868b8',
+  shirt:    '#38a848',
   shirtLt:  '#5080d0',
   pants:    '#2850a0',
   pantsLt:  '#3868b8',
@@ -78,7 +78,7 @@ export const PAL = {
   // NPCs
   npc0shirt:'#c83838',
   npc0hat:  '#982828',
-  npc1shirt:'#38a848',
+  npc1shirt:'#3868b8',
   npc1hat:  '#286828',
   npc2shirt:'#c87828',
   npc2hat:  '#a06020',

@@ -71,7 +71,7 @@ export const PAL = {
   skinDk:   '#d8a070',
   hair:     '#483818',
   shirt:    '#38a848',
-  shirtLt:  '#5080d0',
+  shirtLt:  '#58c868',
   pants:    '#2850a0',
   pantsLt:  '#3868b8',
 

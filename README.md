@@ -82,15 +82,6 @@ portfolio-site/
 - [ ] Custom domain setup
 - [ ] Analytics integration to track which projects visitors explore
 
-## Running Locally
-
-No build step required. Serve the static files:
-
-```bash
-cd portfolio-site
-python3 -m http.server 8080
-```
-
 Then open http://localhost:8080.
 
 ## License

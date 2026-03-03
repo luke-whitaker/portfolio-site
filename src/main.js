@@ -82,7 +82,8 @@ function update() {
       clearKey('Escape');
       hideOverlay();
       //Step player down one tile so they don't re-trigger the door
-      state.player.y += TILE;
+      state.player.dir = DIR.DOWN; 
+      state.player.y += TILE/2;
       state.mode = 'overworld';
       state.fadeDir = -1;  // fade out from black
       state.fade = 1;

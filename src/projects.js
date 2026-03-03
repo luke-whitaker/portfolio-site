@@ -3,6 +3,16 @@
 
 export const PROJECTS = [
   {
+    id: 'my-home',
+    title: 'Chez Luke Whitaker',
+    subtitle: 'Where my important information lives',
+    description: 'This is where I keep my most important documents like my resume, CV, diplomas, certificates, family photos, etc.',
+    tags: ['resume', 'home', 'certifications'],
+    link: '#',
+    doorCol: 43, 
+    doorRow: 9,
+  },
+  {
     id: 'stats',
     title: 'Stats Web App',
     subtitle: 'Data tools for quantitatively literate non-experts',
@@ -12,7 +22,7 @@ export const PROJECTS = [
       'the steep learning curve of R or SPSS.',
     tags: ['Python', 'Statistics', 'Web App'],
     link: '#',
-    doorCol: 6,
+    doorCol: 66,
     doorRow: 9,
   },
   {
@@ -25,7 +35,7 @@ export const PROJECTS = [
       'discourse structure.',
     tags: ['NLP', 'Linguistics', 'Python'],
     link: '#',
-    doorCol: 14,
+    doorCol: 74,
     doorRow: 9,
   },
   {
@@ -38,7 +48,7 @@ export const PROJECTS = [
       'narrative discussion.',
     tags: ['Jupyter', 'Data Science', 'Linguistics'],
     link: '#',
-    doorCol: 22,
+    doorCol: 82,
     doorRow: 9,
   },
 ];

@@ -1,6 +1,6 @@
 // Tile & map dimensions
 export const TILE = 16;
-export const MAP_COLS = 30;
+export const MAP_COLS = 90;
 export const MAP_ROWS = 20;
 
 // Native canvas resolution

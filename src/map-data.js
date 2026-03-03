@@ -25,45 +25,45 @@ const WR = T.WALL_RIGHT;
 // prettier-ignore
 export const tiles = [
   // Row 0: top border — trees and water
-  [TT, TT, TT, W,  W,  W,  W,  W,  TT, TT, TT, TT, G,  G,  TT, TT, TT, TT, G,  G,  TT, TT, TT, W,  W,  W,  W,  TT, TT, TT],
+  [TT,  TT, TT,  TT,  TT,  TT, TT, TT, TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT, TT, TT, TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT, G,  G,  G,  G,  G,  G,  G,  G,  G, G, G,  G,  G,  G,  G,  G,  G,  G, G, G,  G,  G, G, G, G, G, G, G, G, G, TT, TT, TT, W, W, W, W, W, TT, TT, TT, TT, G, G, TT, TT, TT, TT, G, G, TT, TT, TT, W, W, W, W,  TT, TT, TT],
   // Row 1: tree trunks and water
-  [TB, TB, TB, W,  W,  W,  W,  W,  TB, TB, TB, TB, G,  G,  TB, TB, TB, TB, G,  G,  TB, TB, TB, W,  W,  W,  W,  TB, TB, TB],
+  [TT,  TT, TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, TB, TB, TB, W,  W,  W,  W,  W,  TB, TB, TB, TB, G,  G,  TB, TB, TB, TB, G,  G,  TB, TB, TB, W,  W,  W,  W,  TB, TB, TB],
   // Row 2: open area with flowers
-  [G,  G,  G,  G,  FL, G,  G,  G,  G,  G,  G,  FL, G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G ],
+  [TT, TT, G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G, G,  FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G,  FL,  G,  G,  G, FL, G,  G,  G,  G,  FL, G,  G,  G,  G,  G,  G,  FL, G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G ],
   // Row 3: fence above buildings
-  [G,  G,  FN, FN, FN, FN, FN, FN, FN, G,  FN, FN, FN, FN, FN, FN, FN, G,  FN, FN, FN, FN, FN, FN, FN, FN, G,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  FN, FN, FN, FN, FN, FN, FN, G,  FN, FN, FN, FN, FN, FN, FN, G,  FN, FN, FN, FN, FN, FN, FN, FN, G,  G,  G,  G ],
   // Row 4: space
-  [G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
+  [TT, TT, G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL, G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
   // Row 5: space
-  [G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
   // Row 6: space before roofs
-  [G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G ],
   // Row 7: roofs — Building 1 (cols 4-8), Building 2 (cols 12-16), Building 3 (cols 20-24)
-  [G,  G,  G,  RL, RF, RF, RF, RF, RR, G,  G,  RL, RF, RF, RF, RF, RR, G,  G,  RL, RF, RF, RF, RF, RR, G,  G,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  RL,  RF,  RF,  RF,  RF,  RF,  RR,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  RL, RF, RF, RF, RF, RR, G,  G,  RL, RF, RF, RF, RF, RR, G,  G,  RL, RF, RF, RF, RF, RR, G,  G,  G,  G,  G ],
   // Row 8: walls with windows
-  [G,  G,  G,  WL, WN, WA, WA, WN, WR, G,  G,  WL, WN, WA, WA, WN, WR, G,  G,  WL, WN, WA, WA, WN, WR, G,  G,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  WL,  WA,  WN,  WA,  WN,  WA,  WR,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  WL, WN, WA, WA, WN, WR, G,  G,  WL, WN, WA, WA, WN, WR, G,  G,  WL, WN, WA, WA, WN, WR, G,  G,  G,  G,  G ],
   // Row 9: walls with doors
-  [G,  G,  G,  WL, WA, WA, DR, WA, WR, G,  G,  WL, WA, WA, DR, WA, WR, G,  G,  WL, WA, WA, DR, WA, WR, G,  G,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  WL,  WA,  WA,  DR,  WA,  WA,  WR,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  WL, WA, WA, DR, WA, WR, G,  G,  WL, WA, WA, DR, WA, WR, G,  G,  WL, WA, WA, DR, WA, WR, G,  G,  G,  G,  G ],
   // Row 10: path in front of buildings
-  [G,  G,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  P,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  G,  G,  G ],
   // Row 11: path
-  [G,  G,  G,  G,  G,  G,  P,  G,  G,  G,  G,  G,  G,  G,  P,  G,  G,  G,  G,  G,  G,  G,  P,  G,  G,  G,  G,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  P,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  P,  G,  G,  G,  G,  G,  G,  G,  P,  G,  G,  G,  G,  G,  G,  G,  P,  G,  G,  G,  G,  G,  G,  G ],
   // Row 12: vertical paths down from doors + NPC area
-  [G,  FL, G,  G,  G,  G,  P,  G,  G,  FL, G,  G,  G,  G,  P,  G,  G,  FL, G,  G,  G,  G,  P,  G,  G,  FL, G,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, P, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL,  SN,  G, G,  FL, G,  G,  G,  G,  P,  G,  G,  FL, G,  G,  G,  G,  P,  G,  G,  FL, G,  G,  G,  G,  P,  G,  G,  FL, G,  G,  G,  G ],
   // Row 13: main horizontal path
-  [P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P ],
+  [TT, TT, G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  P, P, P,  P,  P,  P,  P,  P, P,  P, P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P, P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P,  P ],
   // Row 14: below path
-  [G,  G,  G,  G,  FL, G,  G,  G,  G,  G,  G,  FL, G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL, FL,  G,  G,  G,  FL, G,  G,  G,  G,  G,  G,  FL, G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G ],
   // Row 15: some trees and open grass
-  [G,  G,  TT, G,  G,  G,  G,  G,  TT, G,  G,  G,  G,  G,  G,  G,  TT, G,  G,  G,  G,  G,  G,  TT, G,  G,  G,  G,  TT, G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  TT, G,  G,  G,  G,  G,  TT, G,  G,  G,  G,  G,  G,  G,  TT, G,  G,  G,  G,  G,  G,  TT, G,  G,  G,  G,  TT, G ],
   // Row 16
-  [G,  G,  TB, G,  G,  G,  G,  G,  TB, G,  G,  G,  G,  G,  G,  G,  TB, G,  G,  G,  G,  G,  G,  TB, G,  G,  G,  G,  TB, G ],
+  [TT, TT, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G,  G,  TB, G,  G,  G,  G,  G,  TB, G,  G,  G,  G,  G,  G,  G,  TB, G,  G,  G,  G,  G,  G,  TB, G,  G,  G,  G,  TB, G ],
   // Row 17: water at bottom
-  [G,  G,  G,  G,  G,  FN, FN, FN, G,  G,  G,  G,  G,  FN, FN, FN, G,  G,  G,  G,  G,  FN, FN, FN, G,  G,  G,  G,  G,  G ],
+  [W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  W, W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  W, G,  G,  G,  G,  G,  FN, FN, FN, G,  G,  G,  G,  G,  FN, FN, FN, G,  G,  G,  G,  G,  FN, FN, FN, G,  G,  G,  G,  G,  G ],
   // Row 18
-  [W,  W,  W,  W,  G,  G,  G,  G,  G,  G,  W,  W,  W,  G,  G,  G,  G,  W,  W,  W,  G,  G,  G,  G,  G,  G,  W,  W,  W,  W ],
+  [W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  W, W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  W, W,  W,  W,  W,  G,  G,  G,  G,  G,  G,  W,  W,  W,  G,  G,  G,  G,  W,  W,  W,  G,  G,  G,  G,  G,  G,  W,  W,  W,  W ],
   // Row 19: bottom water
-  [W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  W ],
+  [W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  W, W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  W, W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  G,  G,  G,  W,  W,  W,  W,  W,  W ],
 ];
 
 // Collision: 1 = solid, 0 = walkable

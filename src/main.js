@@ -3,7 +3,7 @@ import { createCanvas } from './canvas.js';
 import { initInput, isDown, clearKey } from './input.js';
 import { startLoop } from './game-loop.js';
 import { generateTileset } from './tileset.js';
-import { generatePlayerSprites } from './sprites.js';
+import { generatePlayerSprites, DIR } from './sprites.js';
 import { createPlayer, updatePlayer, renderPlayer, getPlayerTile } from './player.js';
 import { renderMap } from './map-renderer.js';
 import { updateCamera } from './camera.js';

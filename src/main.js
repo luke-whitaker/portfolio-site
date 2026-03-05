@@ -31,8 +31,8 @@ initInput();
 const tileset = generateTileset();
 const playerSprites = generatePlayerSprites();
 
-// Player starts on the main path (col 14, row 13)
-state.player = createPlayer(14, 13);
+// Player starts on the main path in front of his home (col 44, row 13)
+state.player = createPlayer(44, 13);
 state.npcs = createNPCs();
 
 // ---- Dialogue UI elements ----

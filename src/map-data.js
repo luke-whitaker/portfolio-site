@@ -1,6 +1,7 @@
 import { T } from './tileset.js';
+import { MAP_COLS, MAP_ROWS } from './constants.js';
 
-// 30 columns x 20 rows
+// 90 columns x 20 rows
 // Legend: G=grass, P=path, W=water, TT=tree top, TB=tree trunk,
 //         WL=wall, RF=roof, DR=door, WN=window, FN=fence, SN=sign
 //         RL=roof left, RR=roof right, FL=flower, WL2=wall left, WR2=wall right
@@ -27,7 +28,7 @@ export const tiles = [
   // Row 0: top border — trees and water
   [TT,  TT, TT,  TT,  TT,  TT, TT, TT, TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT, TT, TT, TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT, G,  G,  G,  G,  G,  G,  G,  G,  G, G, G,  G,  G,  G,  G,  G,  G,  G, G, G,  G,  G, G, G, G, G, G, G, G, G, TT, TT, TT, W, W, W, W, W, TT, TT, TT, TT, G, G, TT, TT, TT, TT, G, G, TT, TT, TT, W, W, W, W,  TT, TT, TT],
   // Row 1: tree trunks and water
-  [TT,  TT, TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, TB, TB, TB, W,  W,  W,  W,  W,  TB, TB, TB, TB, G,  G,  TB, TB, TB, TB, G,  G,  TB, TB, TB, W,  W,  W,  W,  TB, TB, TB],
+  [TT,  TT, TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  TT,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, G, G, G, G, G, G, G, G,  G,  G,  G,  G,  G,  G,  G,  G,  G,  G, TB, TB, TB, W,  W,  W,  W,  W,  TB, TB, TB, TB, G,  G,  TB, TB, TB, TB, G,  G,  TB, TB, TB, W,  W,  W,  W,  TB, TB, TB],
   // Row 2: open area with flowers
   [TT, TT, G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G, G,  FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G, FL,  G,  G,  G,  FL,  G,  G,  G, FL, G,  G,  G,  G,  FL, G,  G,  G,  G,  G,  G,  FL, G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G,  FL, G,  G,  G,  G ],
   // Row 3: fence above buildings
@@ -73,6 +74,6 @@ const SOLID = new Set([T.WATER, T.WATER2, T.TREE_TOP, T.TREE_TRUNK, T.WALL, T.RO
   T.FENCE, T.WINDOW, T.ROOF_LEFT, T.ROOF_RIGHT, T.WALL_LEFT, T.WALL_RIGHT]);
 
 export function isSolid(col, row) {
-  if (col < 0 || col >= 30 || row < 0 || row >= 20) return true;
+  if (col < 0 || col >= MAP_COLS || row < 0 || row >= MAP_ROWS) return true;
   return SOLID.has(tiles[row][col]);
 }

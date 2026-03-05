@@ -111,6 +111,55 @@ export function generatePlayerSprites() {
   return sprites;
 }
 
+// Generate a black cat sprite
+export function generateCatSprite() {
+  return makeSprite(c => {
+    const black = '#1a1a2e';
+    const darkGrey = '#2a2a4a';
+
+    // Body
+    c.fillStyle = black;
+    c.fillRect(3, 7, 10, 5);
+    c.fillStyle = darkGrey;
+    c.fillRect(5, 8, 6, 3);
+
+    // Head
+    c.fillStyle = black;
+    c.fillRect(5, 3, 7, 5);
+    // Ears
+    c.fillRect(5, 1, 2, 3);
+    c.fillRect(10, 1, 2, 3);
+    c.fillStyle = '#c87828';
+    c.fillRect(6, 2, 1, 1);
+    c.fillRect(10, 2, 1, 1);
+
+    // Eyes
+    c.fillStyle = '#58a848';
+    c.fillRect(6, 5, 2, 1);
+    c.fillRect(9, 5, 2, 1);
+    c.fillStyle = black;
+    c.fillRect(7, 5, 1, 1);
+    c.fillRect(10, 5, 1, 1);
+
+    // Nose
+    c.fillStyle = '#c87878';
+    c.fillRect(8, 6, 1, 1);
+
+    // Tail
+    c.fillStyle = black;
+    c.fillRect(12, 8, 2, 1);
+    c.fillRect(13, 7, 2, 1);
+    c.fillRect(14, 5, 1, 2);
+    c.fillStyle = darkGrey;
+    c.fillRect(14, 5, 1, 1);
+
+    // Paws
+    c.fillStyle = darkGrey;
+    c.fillRect(4, 12, 2, 1);
+    c.fillRect(10, 12, 2, 1);
+  });
+}
+
 // Generate NPC sprite (simpler, static) — each variant has different colours
 export function generateNPCSprite(variant) {
   const configs = [

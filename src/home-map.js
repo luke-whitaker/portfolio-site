@@ -1,0 +1,65 @@
+import { T } from './tileset.js';
+
+// Interior tile shortcuts
+const F  = T.FLOOR;
+const IW = T.INT_WALL;
+const IB = T.INT_WALL_BOTTOM;
+const RG = T.RUG;
+const SH = T.SHELF;
+const TB = T.TABLE;
+const ED = T.EXIT_DOOR;
+const WN = T.INT_WINDOW;
+
+// 15 columns x 10 rows — a cosy home interior
+// prettier-ignore
+export const homeTiles = [
+  // Row 0: top wall
+  [IW, IW, IW, IW, SH, SH, IW, WN, IW, SH, SH, IW, IW, IW, IW],
+  // Row 1: wall bottom with baseboards
+  [IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB],
+  // Row 2: open floor
+  [F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F ],
+  // Row 3: table area
+  [F,  F,  TB, F,  F,  F,  F,  F,  F,  F,  F,  F,  TB, F,  F ],
+  // Row 4: rug area
+  [F,  F,  F,  F,  RG, RG, RG, RG, RG, RG, RG, F,  F,  F,  F ],
+  // Row 5: rug area
+  [F,  F,  F,  F,  RG, RG, RG, RG, RG, RG, RG, F,  F,  F,  F ],
+  // Row 6: open floor
+  [F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F ],
+  // Row 7: open floor
+  [F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F ],
+  // Row 8: bottom wall with exit door
+  [IB, IB, IB, IB, IB, IB, IB, ED, IB, IB, IB, IB, IB, IB, IB],
+  // Row 9: below wall (not visible, acts as boundary)
+  [IW, IW, IW, IW, IW, IW, IW, IW, IW, IW, IW, IW, IW, IW, IW],
+];
+
+export const HOME_COLS = 15;
+export const HOME_ROWS = 10;
+
+// Tiles that are solid inside the home
+const HOME_SOLID = new Set([
+  T.INT_WALL, T.INT_WALL_BOTTOM, T.SHELF, T.TABLE, T.INT_WINDOW,
+]);
+
+export function isHomeSolid(col, row) {
+  if (col < 0 || col >= HOME_COLS || row < 0 || row >= HOME_ROWS) return true;
+  return HOME_SOLID.has(homeTiles[row][col]);
+}
+
+// Exit door position
+export const HOME_EXIT = { col: 7, row: 8 };
+
+// Player spawn position when entering home
+export const HOME_SPAWN = { col: 7, row: 7 };
+
+// Cat position inside home
+export const HOME_CAT = {
+  col: 6, row: 5,
+  lines: [
+    "Mrrrow...",
+    "...purrr...",
+    "The cat stares at you\nwith knowing eyes.",
+  ],
+};

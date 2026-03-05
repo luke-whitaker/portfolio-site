@@ -2,16 +2,17 @@
 // Door coords are tile positions (col, row) in the map
 
 export const PROJECTS = [
-  {
-    id: 'my-home',
-    title: 'Chez Luke Whitaker',
-    subtitle: 'Where my important information lives',
-    description: 'This is where I keep my most important documents like my resume, CV, diplomas, certificates, family photos, etc.',
-    tags: ['resume', 'home', 'certifications'],
-    link: '#',
-    doorCol: 42, 
-    doorRow: 9,
-  },
+  // Commenting out this Project Title Card for fututre use, just in case
+  //{
+  //  id: 'my-home',
+  //  title: 'Chez Luke Whitaker',
+  //  subtitle: 'Where my important information lives',
+  //  description: 'This is where I keep my most important documents like my resume, CV, diplomas, certificates, family photos, etc.',
+  //  tags: ['resume', 'home', 'certifications'],
+  //  link: '#',
+  //  doorCol: 42, 
+  //  doorRow: 9,
+  //},
   {
     id: 'stats',
     title: 'Stats Web App',

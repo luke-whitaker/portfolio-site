@@ -55,7 +55,7 @@ export const PROJECTS = [
 
 // Doors that trigger a map transition instead of an overlay
 export const MAP_DOORS = [
-  { doorCol: 43, doorRow: 9, targetMap: 'home' },
+  { doorCol: 42, doorRow: 9, targetMap: 'home' },
 ];
 
 // Check if a tile is a map-transition door

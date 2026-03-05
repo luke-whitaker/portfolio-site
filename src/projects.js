@@ -9,7 +9,7 @@ export const PROJECTS = [
     description: 'This is where I keep my most important documents like my resume, CV, diplomas, certificates, family photos, etc.',
     tags: ['resume', 'home', 'certifications'],
     link: '#',
-    doorCol: 43, 
+    doorCol: 42, 
     doorRow: 9,
   },
   {

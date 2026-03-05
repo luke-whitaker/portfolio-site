@@ -4,7 +4,7 @@ export const MAP_COLS = 90;
 export const MAP_ROWS = 20;
 
 // Native canvas resolution
-export const CANVAS_W = MAP_COLS * TILE;   // 480
+export const CANVAS_W = 30 * TILE;   // 480
 export const CANVAS_H = MAP_ROWS * TILE;   // 320
 
 // Pokemon Leaf Green-inspired full-colour palette

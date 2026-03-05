@@ -1,6 +1,5 @@
 import { TILE, PLAYER_SPEED, PLAYER_W, PLAYER_H, PLAYER_OFFSET_X, PLAYER_OFFSET_Y, ANIM_FRAME_TICKS } from './constants.js';
 import { isDown } from './input.js';
-import { isSolid } from './map-data.js';
 import { DIR } from './sprites.js';
 
 export function createPlayer(tileCol, tileRow) {
@@ -14,7 +13,7 @@ export function createPlayer(tileCol, tileRow) {
   };
 }
 
-export function updatePlayer(player) {
+export function updatePlayer(player, solidFn) {
   let dx = 0;
   let dy = 0;
 
@@ -41,14 +40,14 @@ export function updatePlayer(player) {
   // Per-axis collision — move X first, then Y
   if (dx !== 0) {
     const newX = player.x + dx;
-    if (!collidesAt(newX, player.y)) {
+    if (!collidesAt(newX, player.y, solidFn)) {
       player.x = newX;
     }
   }
 
   if (dy !== 0) {
     const newY = player.y + dy;
-    if (!collidesAt(player.x, newY)) {
+    if (!collidesAt(player.x, newY, solidFn)) {
       player.y = newY;
     }
   }
@@ -66,20 +65,18 @@ export function updatePlayer(player) {
   }
 }
 
-function collidesAt(x, y) {
-  // Player hitbox: smaller than tile
+function collidesAt(x, y, solidFn) {
   const left   = x + PLAYER_OFFSET_X;
   const right  = x + PLAYER_OFFSET_X + PLAYER_W - 1;
   const top    = y + PLAYER_OFFSET_Y;
   const bottom = y + PLAYER_OFFSET_Y + PLAYER_H - 1;
 
-  // Check all four corners
   const c1 = Math.floor(left / TILE);
   const c2 = Math.floor(right / TILE);
   const r1 = Math.floor(top / TILE);
   const r2 = Math.floor(bottom / TILE);
 
-  return isSolid(c1, r1) || isSolid(c2, r1) || isSolid(c1, r2) || isSolid(c2, r2);
+  return solidFn(c1, r1) || solidFn(c2, r1) || solidFn(c1, r2) || solidFn(c2, r2);
 }
 
 export function renderPlayer(ctx, player, sprites, camX, camY) {

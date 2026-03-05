@@ -53,7 +53,19 @@ export const PROJECTS = [
   },
 ];
 
-// Get project by door tile position
+// Doors that trigger a map transition instead of an overlay
+export const MAP_DOORS = [
+  { doorCol: 43, doorRow: 9, targetMap: 'home' },
+];
+
+// Check if a tile is a map-transition door
+export function getMapDoorAt(col, row) {
+  return MAP_DOORS.find(d => d.doorCol === col && d.doorRow === row) || null;
+}
+
+// Get project by door tile position (only non-map-door projects)
 export function getProjectAtDoor(col, row) {
+  // Skip doors that are handled as map transitions
+  if (getMapDoorAt(col, row)) return null;
   return PROJECTS.find(p => p.doorCol === col && p.doorRow === row) || null;
 }

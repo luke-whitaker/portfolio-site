@@ -217,7 +217,75 @@ body {
   margin-top: 0.4rem;
 }
 
-/* === Mobile touch hint === */
+/* === Mobile Controls === */
+#mobile-controls {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  padding: 0 1.5rem;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 30;
+  pointer-events: none;
+}
+
+@media (pointer: coarse) {
+  #mobile-controls {
+    display: flex;
+  }
+  /* Push dialogue box up so it clears the D-pad */
+  #dialogue-box {
+    bottom: 11rem;
+  }
+}
+
+#dpad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  pointer-events: auto;
+}
+
+.dpad-row {
+  display: flex;
+  gap: 4px;
+}
+
+.dpad-btn {
+  width: 56px;
+  height: 56px;
+  background: rgba(248, 248, 240, 0.12);
+  border: 2px solid rgba(248, 248, 240, 0.35);
+  border-radius: 8px;
+  color: #f8f8f0;
+  font-size: 1rem;
+  font-family: monospace;
+  cursor: pointer;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.dpad-btn:active {
+  background: rgba(248, 248, 240, 0.3);
+}
+
+#btn-interact {
+  width: 64px;
+  height: 64px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  background: rgba(136, 200, 248, 0.15);
+  border-color: rgba(136, 200, 248, 0.5);
+  color: #88c8f8;
+}
+
+/* === Small screen adjustments === */
 @media (max-width: 600px) {
   #title-screen h1 {
     font-size: 1.5rem;

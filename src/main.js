@@ -1,6 +1,6 @@
 import { TILE, PAL, CANVAS_W, CANVAS_H, MAP_COLS, MAP_ROWS } from './constants.js';
 import { createCanvas } from './canvas.js';
-import { initInput, isDown, clearKey } from './input.js';
+import { initInput, isDown, clearKey, pressKey, isTouchDevice } from './input.js';
 import { startLoop } from './game-loop.js';
 import { generateTileset } from './tileset.js';
 import { generatePlayerSprites, generateCatSprite, DIR } from './sprites.js';
@@ -32,7 +32,7 @@ const state = {
 };
 
 // ---- Init ----
-const { ctx } = createCanvas();
+const { canvas, ctx } = createCanvas();
 initInput();
 const tileset = generateTileset();
 const playerSprites = generatePlayerSprites();
@@ -77,6 +77,30 @@ const dialogueText = document.getElementById('dialogue-text');
 
 // ---- Title screen ----
 const titleScreen = document.getElementById('title-screen');
+
+// ---- Mobile: update hint text and wire up tap handlers ----
+if (isTouchDevice) {
+  document.getElementById('start-hint').textContent = 'Tap to start';
+  document.getElementById('dialogue-hint').textContent = 'TAP to continue';
+  document.getElementById('overlay-hint').textContent = 'Tap outside to return';
+}
+
+// Overlay backdrop tap → close
+const overlayBackdrop = document.getElementById('overlay');
+overlayBackdrop.addEventListener('click', e => {
+  if (e.target === overlayBackdrop && state.mode === 'overlay') {
+    hideOverlay();
+    state.player.dir = DIR.DOWN;
+    state.player.y += TILE;
+    state.mode = 'overworld';
+    state.fadeDir = -1;
+    state.fade = 1;
+  }
+});
+
+// Canvas / title screen tap → press Enter (advances dialogue, starts game)
+canvas.addEventListener('click', () => pressKey('Enter'));
+titleScreen.addEventListener('click', () => pressKey('Enter'));
 
 // ---- Update ----
 function update() {
@@ -284,7 +308,7 @@ function render() {
       ctx.fillStyle = PAL.uiText;
       ctx.font = '7px monospace';
       ctx.textAlign = 'center';
-      ctx.fillText('ENTER', sx, sy + 2);
+      ctx.fillText(isTouchDevice ? 'TAP' : 'ENTER', sx, sy + 2);
       ctx.textAlign = 'start';
     }
   }

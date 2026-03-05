@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Luke's Portfolio</title>
   <meta name="description" content="Luke Whitaker's portfolio — an 8-bit village where each building is a project.">
   <meta property="og:title" content="Luke's Portfolio">
@@ -19,7 +19,7 @@
   <div id="title-screen">
     <h1>Luke's Portfolio</h1>
     <h2>an 8-bit adventure</h2>
-    <span class="blink">Press ENTER to start</span>
+    <span class="blink" id="start-hint">Press ENTER to start</span>
   </div>
 
   <!-- Project Overlay -->
@@ -30,14 +30,27 @@
       <p class="desc" id="overlay-desc"></p>
       <div class="tags" id="overlay-tags"></div>
       <a id="overlay-link" href="#" target="_blank">View Project</a>
-      <span class="esc-hint">Press ESC to return</span>
+      <span class="esc-hint" id="overlay-hint">Press ESC to return</span>
     </div>
   </div>
 
   <!-- Dialogue Box -->
   <div id="dialogue-box">
     <span id="dialogue-text"></span>
-    <span class="hint">ENTER / ESC</span>
+    <span class="hint" id="dialogue-hint">ENTER / ESC</span>
+  </div>
+
+  <!-- Mobile Controls -->
+  <div id="mobile-controls">
+    <div id="dpad">
+      <button class="dpad-btn" id="btn-up">▲</button>
+      <div class="dpad-row">
+        <button class="dpad-btn" id="btn-left">◄</button>
+        <button class="dpad-btn" id="btn-right">►</button>
+      </div>
+      <button class="dpad-btn" id="btn-down">▼</button>
+    </div>
+    <button class="dpad-btn" id="btn-interact">A</button>
   </div>
 
   <!-- Game Script -->

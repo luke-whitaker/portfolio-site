@@ -2,7 +2,7 @@
 // Door coords are tile positions (col, row) in the map
 
 export const PROJECTS = [
-  // Commenting out this Project Title Card for fututre use, just in case
+  // Commenting out this Project Title Card for future use, just in case
   //{
   //  id: 'my-home',
   //  title: 'Chez Luke Whitaker',
@@ -10,45 +10,52 @@ export const PROJECTS = [
   //  description: 'This is where I keep my most important documents like my resume, CV, diplomas, certificates, family photos, etc.',
   //  tags: ['resume', 'home', 'certifications'],
   //  link: '#',
-  //  doorCol: 42, 
+  //  doorCol: 42,
   //  doorRow: 9,
   //},
   {
-    id: 'stats',
-    title: 'Stats Web App',
-    subtitle: 'Data tools for quantitatively literate non-experts',
+    id: 'stats-lab',
+    title: 'The Future of Language Education',
+    subtitle: 'Zimotti, Frances & Whitaker · Technology in Language Teaching & Learning · 2024',
     description:
-      'An interactive statistics toolkit that makes quantitative analysis accessible. ' +
-      'Built for researchers and students who need reliable statistical tools without ' +
-      'the steep learning curve of R or SPSS.',
-    tags: ['Python', 'Statistics', 'Web App'],
-    link: '#',
+      'A survey of 100+ language teachers on their perceptions of AI writing tools like ChatGPT — ' +
+      'framed as the next evolution of the academic integrity challenges introduced by Google Translate in 2006. ' +
+      'Teachers reported mixed attitudes: concern about job security alongside optimism about the technology\'s potential. ' +
+      'The article offers practical guidance on classroom policy and assignment design for navigating AI in language education. ' +
+      'Role: Co-author & primary Data Analyst.',
+    tags: ['Generative AI', 'CALL', 'Applied Linguistics', 'Data Analysis'],
+    link: 'https://doi.org/10.29140/tltl.v6n2.1136',
+    linkText: 'Read Article',
     doorCol: 66,
     doorRow: 9,
   },
   {
-    id: 'corpus',
-    title: 'Corpus Analysis Explorer',
-    subtitle: 'Linguistic profile tool with curated metrics',
+    id: 'ling-lab',
+    title: 'French Interrogatives in Context',
+    subtitle: 'MA Thesis · University of Iowa · 2021',
     description:
-      'A text analysis platform that generates rich linguistic profiles from any corpus. ' +
-      'Computes curated metrics spanning lexical diversity, syntactic complexity, and ' +
-      'discourse structure.',
-    tags: ['NLP', 'Linguistics', 'Python'],
-    link: '#',
+      'An empirical study examining whether Heritage French speakers are as sensitive as native speakers ' +
+      'to the social and contextual factors that govern different question forms in French. ' +
+      'Participants judged the acceptability of interrogative structures across formal and informal registers, ' +
+      'revealing nuanced patterns in how heritage speakers navigate syntactic variation in their non-dominant language.',
+    tags: ['Syntax', 'Discourse', 'French', 'Heritage Linguistics'],
+    link: 'https://iro.uiowa.edu/esploro/outputs/graduate/French-interrogatives-in-context/9984096974302771',
+    linkText: 'Read Thesis',
     doorCol: 74,
     doorRow: 9,
   },
   {
-    id: 'notebooks',
-    title: 'Jupyter Notebook Series',
-    subtitle: 'Mini-papers on linguistic datasets',
+    id: 'dev-lab',
+    title: 'This Portfolio Site',
+    subtitle: 'Vanilla JS · GitHub Pages · 2025–present',
     description:
-      'A collection of computational essays exploring linguistic datasets. Each notebook ' +
-      'is a self-contained mini-paper with reproducible analysis, visualisations, and ' +
-      'narrative discussion.',
-    tags: ['Jupyter', 'Data Science', 'Linguistics'],
-    link: '#',
+      'The site you\'re currently exploring. A Pokémon-inspired RPG portfolio built entirely with ' +
+      'vanilla JavaScript, HTML, and CSS — no frameworks, no build tools, no dependencies. ' +
+      'Features procedurally generated pixel art, a walkable overworld, building interiors, ' +
+      'NPC dialogue, and full mobile touch support.',
+    tags: ['JavaScript', 'HTML/CSS', 'GitHub Pages', 'Game Design'],
+    link: 'https://github.com/luke-whitaker/portfolio-site',
+    linkText: 'View on GitHub',
     doorCol: 82,
     doorRow: 9,
   },

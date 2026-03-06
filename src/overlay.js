@@ -19,7 +19,7 @@ export function showOverlay(project) {
   }
 
   linkEl.href = project.link;
-  linkEl.textContent = project.link === '#' ? 'Coming soon' : 'View Project';
+  linkEl.textContent = project.link === '#' ? 'Coming soon' : (project.linkText || 'View Project');
 
   overlayEl.classList.add('visible');
 }

@@ -7,26 +7,26 @@ export const NPC_DATA = [
     variant: 0,
     lines: [
       "Welcome to the Stats Lab!",
-      "Luke built tools that make data\naccessible to everyone.",
-      "Walk through the door to\nsee the project!",
+      "Inside you'll find Luke's\nco-authored 2024 research on AI\nin language education.",
+      "Walk through the door\nto read the article!",
     ],
   },
   {
     col: 72, row: 10,
     variant: 1,
     lines: [
-      "This is the Corpus Explorer!",
-      "It generates linguistic profiles\nfrom any text you give it.",
-      "Fancy a look? Head inside!",
+      "This is the Ling Lab!",
+      "It houses Luke's MA Thesis —\nan empirical study of French\nsyntax and heritage speakers.",
+      "Head inside to read it!",
     ],
   },
   {
     col: 80, row: 10,
     variant: 2,
     lines: [
-      "Ah, the Notebook Library!",
-      "Each notebook is a mini-paper\non a linguistic dataset.",
-      "Enter to browse the collection!",
+      "Welcome to the Dev Lab!",
+      "This is where Luke keeps\nhis software projects —\nstarting with this portfolio site.",
+      "Enter to see the source!",
     ],
   },
 ];
@@ -43,7 +43,7 @@ export function createNPCs() {
 
 export function renderNPCs(ctx, npcs, camX, camY) {
   for (const npc of npcs) {
-    ctx.drawImage(npc.sprite, npc.x - camX, npc.y - camY);
+    if (npc.sprite) ctx.drawImage(npc.sprite, npc.x - camX, npc.y - camY);
   }
 }
 

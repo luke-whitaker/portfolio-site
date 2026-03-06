@@ -11,7 +11,7 @@ import { getProjectAtDoor, getMapDoorAt } from './projects.js';
 import { showOverlay, hideOverlay, isOverlayVisible } from './overlay.js';
 import { createNPCs, renderNPCs, getNearbyNPC } from './npc.js';
 import { tiles, isSolid } from './map-data.js';
-import { homeTiles, HOME_COLS, HOME_ROWS, isHomeSolid, HOME_EXIT, HOME_SPAWN, HOME_CAT } from './home-map.js';
+import { homeTiles, HOME_COLS, HOME_ROWS, isHomeSolid, HOME_EXIT, HOME_SPAWN, HOME_CAT, HOME_DESK } from './home-map.js';
 
 // ---- State ----
 const state = {
@@ -42,14 +42,23 @@ const catSprite = generateCatSprite();
 state.player = createPlayer(42, 11);
 state.npcs = createNPCs();
 
-// Create interior cat NPC
-state.interiorNPCs = [{
-  x: HOME_CAT.col * TILE,
-  y: HOME_CAT.row * TILE,
-  sprite: catSprite,
-  lines: HOME_CAT.lines,
-  lineIndex: 0,
-}];
+// Create interior NPCs: cat + desk
+state.interiorNPCs = [
+  {
+    x: HOME_CAT.col * TILE,
+    y: HOME_CAT.row * TILE,
+    sprite: catSprite,
+    lines: HOME_CAT.lines,
+    lineIndex: 0,
+  },
+  {
+    x: HOME_DESK.col * TILE,
+    y: HOME_DESK.row * TILE,
+    sprite: null,   // desk tile already visible on the map
+    lines: HOME_DESK.lines,
+    lineIndex: 0,
+  },
+];
 
 // ---- Helpers ----
 function getActiveMapInfo() {

@@ -70,8 +70,10 @@ export const HOME_DESK = {
 export const HOME_CAT = {
   col: 6, row: 5,
   lines: [
-    "Mrrrow...",
-    "...purrr...",
-    "The cat stares at you\nwith knowing eyes.",
+    "Mrrrow... a visitor.\nHow nice.\nYou've found Luke's place.",
+    "Luke speaks English, French,\nand Spanish fluently — with some\nPortuguese and Mandarin\npicked up along the way.",
+    "He's a professionally trained\nlinguist and empirical researcher\nwith a passion for language,\ntechnology, and digital interfaces.",
+    "A lifelong language learner.\nAlso a passionate soccer\nfan and player, if you\nwere wondering. ...purrr...",
+    "See that desk in the corner?\nHead over and press A —\nit'll tell you exactly what's\nin each of the labs outside.",
   ],
 };

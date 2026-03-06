@@ -1,6 +1,6 @@
 # Luke's Portfolio
 
-An interactive portfolio website styled as a Pokemon Leaf Green-era RPG. Visitors control a character walking through a pixel-art village where each building represents a portfolio project.
+An interactive portfolio website styled as a Pokemon Leaf Green-era RPG. Visitors control a character walking through a pixel-art village where each building represents real published work.
 
 **[Visit the live site](https://luke-whitaker.github.io/portfolio-site/)**
 
@@ -8,16 +8,25 @@ An interactive portfolio website styled as a Pokemon Leaf Green-era RPG. Visitor
 
 **Desktop**
 - **Arrow keys** — move your character
-- **ENTER** — talk to NPCs / interact
+- **ENTER** — talk to NPCs / interact with objects
 - **Walk into a door** — view project details or enter a building interior
 - **ESC** — close a project card / exit dialogue
 
 **Mobile**
 - **D-pad** (bottom-left) — move your character
-- **A button** (bottom-right) — talk to NPCs / interact
+- **A button** (bottom-right) — talk to NPCs / interact with objects
 - **Walk into a door** — view project details or enter a building interior
 - **Tap outside the card** — close a project card
 - **Tap the screen** — advance dialogue
+
+## The Labs
+
+| Building | Lab | Contents |
+|----------|-----|----------|
+| Home | **Chez Luke** | Cat NPC intro + interactive desk with a guide to all three labs |
+| 1st door | **Stats Lab** | *The Future of Language Education* — co-authored research on AI writing tools in the language classroom (2024) |
+| 2nd door | **Ling Lab** | *French Interrogatives in Context* — MA Thesis on Heritage French syntax and discourse (2021) |
+| 3rd door | **Dev Lab** | This portfolio site + future software projects |
 
 ## Architecture
 
@@ -39,11 +48,11 @@ portfolio-site/
 │   ├── tileset.js          # Procedural 16x16 tile generation
 │   ├── sprites.js          # Procedural player + NPC sprite generation
 │   ├── map-data.js         # 90x20 overworld tile grid + collision map
-│   ├── home-map.js         # 15x10 home interior tile grid + collision map
+│   ├── home-map.js         # 15x10 home interior + cat NPC + desk object
 │   ├── map-renderer.js     # Draws visible tiles each frame
 │   ├── player.js           # Movement, collision, animation
-│   ├── npc.js              # NPC positions, proximity, dialogue lines
-│   ├── overlay.js          # HTML overlay show/hide logic
+│   ├── npc.js              # NPC positions, proximity, dialogue (null sprite support)
+│   ├── overlay.js          # HTML overlay show/hide + custom link text per project
 │   └── projects.js         # Project data + door coordinates + map doors
 └── assets/
     └── README.md           # Notes on replacing generated art
@@ -62,23 +71,15 @@ portfolio-site/
 | Input | Unified key-state object — keyboard events and D-pad touch events both write to the same `keys` map, so all game logic is input-agnostic |
 | Maps | Two maps: `overworld` (90×20) and `home` interior (15×10). Entering/exiting triggers a fade-to-black transition and player respawn |
 | Mobile controls | D-pad + A button rendered via HTML/CSS, visible only on `pointer: coarse` devices |
-
-## Featured Projects
-
-| Building | Project | Description |
-|----------|---------|-------------|
-| Home | **Chez Luke Whitaker** | Walk inside — a cosy interior with a cat NPC |
-| 1 | **Stats Web App** | Data tools for quantitatively literate non-experts |
-| 2 | **Corpus Analysis Explorer** | Linguistic profile tool with curated metrics |
-| 3 | **Jupyter Notebook Series** | Mini-papers on linguistic datasets |
+| Interactables | Objects like the desk reuse the NPC proximity system with a null sprite — the tile itself is the visual, the NPC system handles the interaction |
 
 ## Roadmap
 
 ### Near-term
-- [ ] Add real project URLs to `src/projects.js`
-- [ ] Add project screenshots or pixel-art previews to the overlay cards
+- [ ] Add resume PDF and link it from the home desk
+- [ ] Add family photo tile to home interior
 - [ ] Replace procedural sprites with hand-drawn pixel art (Aseprite / Piskel)
-- [ ] Give the home cat NPC dialogue about what's inside the house
+- [ ] Add project screenshots or pixel-art previews to overlay cards
 
 ### Medium-term
 - [ ] Add more buildings as new projects are completed

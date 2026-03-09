@@ -84,6 +84,7 @@ function getActiveMapInfo() {
 // ---- Dialogue UI elements ----
 const dialogueBox = document.getElementById('dialogue-box');
 const dialogueText = document.getElementById('dialogue-text');
+const dialogueLink = document.getElementById('dialogue-link');
 
 // ---- Title screen ----
 const titleScreen = document.getElementById('title-screen');
@@ -206,6 +207,16 @@ function update() {
       }
     }
 
+    // Show resume link on last page once text is fully typed
+    const isLastLine = d.npc.lineIndex === d.npc.lines.length - 1;
+    if (d.npc.link && isLastLine && d.charIndex >= fullText.length) {
+      dialogueLink.href = d.npc.link;
+      dialogueLink.classList.remove('hidden');
+    } else {
+      dialogueLink.classList.add('hidden');
+      dialogueLink.href = '#';
+    }
+
     if (isDown('Enter') || isDown('Space')) {
       clearKey('Enter');
       clearKey('Space');
@@ -216,8 +227,9 @@ function update() {
         d.npc.lineIndex++;
         if (d.npc.lineIndex >= d.npc.lines.length) {
           d.npc.lineIndex = 0;
-          if (d.npc.link) window.open(d.npc.link, '_blank');
           state.dialogue = null;
+          dialogueLink.classList.add('hidden');
+          dialogueLink.href = '#';
           dialogueBox.classList.remove('visible');
           state.mode = 'overworld';
         } else {
@@ -232,6 +244,8 @@ function update() {
       clearKey('Escape');
       state.dialogue.npc.lineIndex = 0;
       state.dialogue = null;
+      dialogueLink.classList.add('hidden');
+      dialogueLink.href = '#';
       dialogueBox.classList.remove('visible');
       state.mode = 'overworld';
     }

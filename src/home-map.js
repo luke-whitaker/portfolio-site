@@ -57,12 +57,13 @@ export const HOME_SPAWN = { col: 7, row: 7 };
 // Desk position inside home (right-side table, col 12 row 3)
 export const HOME_DESK = {
   col: 12, row: 3,
+  link: 'https://luke-whitaker.github.io/portfolio-site/resume.pdf', // LINK TO RESUME
   lines: [
     "[ Luke's Desk ]\nThree labs are just outside to the East.\nEach one holds different work.",
-    "Stats Lab (1st door on the right):\nCo-authored research on AI\nin language education. (2024)",
-    "Ling Lab (2nd door):\nMA Thesis on French syntax\nand heritage speakers. (2021)",
-    "Dev Lab (3rd door):\nThis portfolio site and\nfuture dev projects.",
-    "Resume coming soon!\nFor now — explore the labs\nand see what's inside.",
+      "Stats Lab (1st door on the right):\nCo-authored research on AI\nin language education. (2024)",
+      "Ling Lab (2nd door):\nMA Thesis on French syntax\nand heritage speakers. (2021)",
+      "Dev Lab (3rd door):\nThis portfolio site and\nfuture dev projects.",
+      "Resume ready!\nPress A/Enter one more time\nto open it in a new tab.",
   ],
 };
 
@@ -74,6 +75,7 @@ export const HOME_CAT = {
     "Luke speaks English, French,\nand Spanish fluently — with some\nPortuguese and Mandarin\npicked up along the way.",
     "He's a professionally trained\nlinguist and empirical researcher\nwith a passion for language,\ntechnology, and digital interfaces.",
     "A lifelong language learner.\nAlso a passionate soccer\nfan and player, if you\nwere wondering. ...purrr...",
-    "See that desk in the corner?\nHead over and press A —\nit'll tell you exactly what's\nin each of the labs outside.",
+    "See that desk in the corner?\nHead over and interact with it—\nit'll tell you exactly what's\nin each of the labs outside.",
+    "On his desk you'll also find a copy of Luke's resume.",
   ],
 };

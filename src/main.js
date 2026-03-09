@@ -215,6 +215,7 @@ function update() {
         d.npc.lineIndex++;
         if (d.npc.lineIndex >= d.npc.lines.length) {
           d.npc.lineIndex = 0;
+          if (d.npc.link) window.open(d.npc.link, '_blank');
           state.dialogue = null;
           dialogueBox.classList.remove('visible');
           state.mode = 'overworld';

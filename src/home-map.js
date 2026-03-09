@@ -14,13 +14,13 @@ const WN = T.INT_WINDOW;
 // prettier-ignore
 export const homeTiles = [
   // Row 0: top wall
-  [IW, IW, IW, IW, SH, SH, IW, WN, IW, SH, SH, IW, IW, IW, IW],
+  [IW, IW, IW, IW, SH, SH, WN, WN, WN, SH, SH, IW, IW, IW, IW],
   // Row 1: wall bottom with baseboards
-  [IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB, IB],
+  [IB, IB, IB, IB, SH, SH, WN, WN, WN, SH, SH, IB, IB, IB, IB],
   // Row 2: open floor
   [F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F ],
   // Row 3: table area
-  [F,  F,  TB, F,  F,  F,  F,  F,  F,  F,  F,  F,  TB, F,  F ],
+  [F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  F,  TB, F,  F ],
   // Row 4: rug area
   [F,  F,  F,  F,  RG, RG, RG, RG, RG, RG, RG, F,  F,  F,  F ],
   // Row 5: rug area
@@ -58,7 +58,7 @@ export const HOME_SPAWN = { col: 7, row: 7 };
 export const HOME_DESK = {
   col: 12, row: 3,
   lines: [
-    "[ Luke's Desk ]\nThree labs are just outside.\nEach one holds different work.",
+    "[ Luke's Desk ]\nThree labs are just outside to the East.\nEach one holds different work.",
     "Stats Lab (1st door on the right):\nCo-authored research on AI\nin language education. (2024)",
     "Ling Lab (2nd door):\nMA Thesis on French syntax\nand heritage speakers. (2021)",
     "Dev Lab (3rd door):\nThis portfolio site and\nfuture dev projects.",

@@ -56,6 +56,7 @@ state.interiorNPCs = [
     y: HOME_DESK.row * TILE,
     sprite: null,   // desk tile already visible on the map
     lines: HOME_DESK.lines,
+    link: HOME_DESK.link,
     lineIndex: 0,
   },
 ];

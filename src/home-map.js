@@ -63,7 +63,7 @@ export const HOME_DESK = {
       "Stats Lab (1st door on the right):\nCo-authored research on AI\nin language education. (2024)",
       "Ling Lab (2nd door):\nMA Thesis on French syntax\nand heritage speakers. (2021)",
       "Dev Lab (3rd door):\nThis portfolio site and\nfuture dev projects.",
-      "Resume ready!\nPress A/Enter one more time\nto open it in a new tab.",
+      "[Luke's resume]\nClick the link below to open Luke's resume in a new tab.",
   ],
 };
 

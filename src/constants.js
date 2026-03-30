@@ -7,86 +7,86 @@ export const MAP_ROWS = 20;
 export const CANVAS_W = 30 * TILE;   // 480
 export const CANVAS_H = MAP_ROWS * TILE;   // 320
 
-// Pokemon Leaf Green-inspired full-colour palette
+// Fantasy 32-colour palette (from fantasy.pal)
 export const PAL = {
   // General
-  darkest:  '#1a1a2e',
-  dark:     '#3a4466',
-  light:    '#c8d8c0',
-  lightest: '#e8f0e0',
-  white:    '#f8f8f0',
+  darkest:  '#353540',
+  dark:     '#636167',
+  light:    '#bfb8b4',
+  lightest: '#ede4da',
+  white:    '#ede4da',
 
   // Grass
-  grass:    '#58a848',
-  grassLt:  '#70c058',
-  grassDk:  '#409038',
+  grass:    '#557d55',
+  grassLt:  '#8b9150',
+  grassDk:  '#446350',
 
   // Path
-  path:     '#d8c078',
-  pathLt:   '#e8d898',
-  pathDk:   '#c0a858',
+  path:     '#bdaa97',
+  pathLt:   '#d4c2b6',
+  pathDk:   '#bda351',
 
   // Water
-  water1:   '#3890f8',
-  water2:   '#2878d8',
-  waterDk:  '#2060b0',
-  waterLt:  '#58a8f8',
+  water1:   '#668da9',
+  water2:   '#769fa6',
+  waterDk:  '#5c699f',
+  waterLt:  '#8bb0ad',
 
   // Trees
-  leaves:   '#286828',
-  leavesMd: '#388838',
-  leavesLt: '#48a848',
-  trunk:    '#885830',
-  trunkDk:  '#604020',
+  leaves:   '#3e554c',
+  leavesMd: '#446350',
+  leavesLt: '#557d55',
+  trunk:    '#735b42',
+  trunkDk:  '#604b3d',
 
   // Buildings
-  roof:     '#c03838',
-  roofDk:   '#982828',
-  roofLt:   '#d85050',
-  wall:     '#e8d8b8',
-  wallDk:   '#d0c098',
-  wallLt:   '#f0e8d0',
-  door:     '#604020',
-  doorDk:   '#483018',
-  doorFrame:'#885830',
-  window:   '#88c8f8',
-  windowDk: '#5898c8',
-  windowFrame: '#d0c098',
+  roof:     '#ca5954',
+  roofDk:   '#a94949',
+  roofLt:   '#e56f4b',
+  wall:     '#d4c2b6',
+  wallDk:   '#bdaa97',
+  wallLt:   '#ede4da',
+  door:     '#735b42',
+  doorDk:   '#604b3d',
+  doorFrame:'#7e674c',
+  window:   '#8bb0ad',
+  windowDk: '#769fa6',
+  windowFrame: '#bdaa97',
 
   // Fence / Sign
-  fence:    '#c0a060',
-  fenceDk:  '#987840',
-  sign:     '#c8a050',
-  signFace: '#f0e8c8',
-  signText: '#604020',
+  fence:    '#86735b',
+  fenceDk:  '#604b3d',
+  sign:     '#bda351',
+  signFace: '#ede4da',
+  signText: '#604b3d',
 
   // Flowers
-  flower1:  '#f06060',
-  flower2:  '#f0d040',
-  flower3:  '#f080c0',
-  flowerCtr:'#f8f060',
+  flower1:  '#a94949',
+  flower2:  '#eeb551',
+  flower3:  '#bc87a5',
+  flowerCtr:'#e8c65b',
 
   // Player
-  skin:     '#f8c898',
-  skinDk:   '#d8a070',
-  hair:     '#483818',
-  shirt:    '#38a848',
-  shirtLt:  '#58c868',
-  pants:    '#2850a0',
-  pantsLt:  '#3868b8',
+  skin:     '#d9a6a6',
+  skinDk:   '#bdaa97',
+  hair:     '#604b3d',
+  shirt:    '#557d55',
+  shirtLt:  '#8b9150',
+  pants:    '#5c699f',
+  pantsLt:  '#668da9',
 
   // NPCs
-  npc0shirt:'#c83838',
-  npc0hat:  '#982828',
-  npc1shirt:'#3868b8',
-  npc1hat:  '#286828',
-  npc2shirt:'#c87828',
-  npc2hat:  '#a06020',
+  npc0shirt:'#ca5954',
+  npc0hat:  '#a94949',
+  npc1shirt:'#5c699f',
+  npc1hat:  '#446350',
+  npc2shirt:'#e39347',
+  npc2hat:  '#7e674c',
 
   // UI
-  uiBg:     '#1a1a2e',
-  uiBorder: '#f8f8f0',
-  uiText:   '#f8f8f0',
+  uiBg:     '#353540',
+  uiBorder: '#ede4da',
+  uiText:   '#ede4da',
 };
 
 // Player

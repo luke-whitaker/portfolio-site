@@ -46,15 +46,15 @@ export const PROJECTS = [
   },
   {
     id: 'dev-lab',
-    title: 'This Portfolio Site',
-    subtitle: 'Vanilla JS · GitHub Pages · 2025–present',
+    title: 'Our Place',
+    subtitle: 'Next.js · TypeScript · SQLite · 2025–present',
     description:
-      'The site you\'re currently exploring. A Pokémon-inspired RPG portfolio built entirely with ' +
-      'vanilla JavaScript, HTML, and CSS — no frameworks, no build tools, no dependencies. ' +
-      'Features procedurally generated pixel art, a walkable overworld, building interiors, ' +
-      'NPC dialogue, and full mobile touch support.',
-    tags: ['JavaScript', 'HTML/CSS', 'GitHub Pages', 'Game Design'],
-    link: 'https://github.com/luke-whitaker/portfolio-site',
+      'A community forum and social platform built on trust, belonging, and genuine connection. ' +
+      'Features communities, rich posts, comments, reactions, events, and personal profiles — ' +
+      'plus an 8-bit RPG overworld where each community is a building in a town. ' +
+      'Think Roblox meets Reddit, but pixel art. The game engine was inspired by this very portfolio site.',
+    tags: ['Next.js', 'TypeScript', 'SQLite', 'Game Design'],
+    link: 'https://github.com/luke-whitaker/our-place',
     linkText: 'View on GitHub',
     doorCol: 82,
     doorRow: 9,

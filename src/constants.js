@@ -83,6 +83,18 @@ export const PAL = {
   npc2shirt:'#e39347',
   npc2hat:  '#7e674c',
 
+  // Female NPCs
+  fnpc0shirt: '#bc87a5',  // Stats Lab — mauve
+  fnpc0hair:  '#604b3d',  // brown hair
+  fnpc1shirt: '#5c699f',  // Ling Lab — blue
+  fnpc1hair:  '#735b42',  // lighter brown hair
+
+  // Dev Lab NPC (latino male, long hair, glasses)
+  devSkin:    '#c49a6c',
+  devHair:    '#4a3728',
+  devShirt:   '#446350',
+  devGlasses: '#353540',
+
   // UI
   uiBg:     '#353540',
   uiBorder: '#ede4da',

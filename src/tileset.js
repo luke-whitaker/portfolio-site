@@ -28,6 +28,8 @@ export const T = {
   TABLE: 22,
   EXIT_DOOR: 23,
   INT_WINDOW: 24,
+  COMPUTER: 25,
+  POSTER: 26,
 };
 
 function makeTile(draw) {
@@ -554,6 +556,75 @@ export function generateTileset() {
     c.fillRect(0, 0, 16, 2);
     c.fillStyle = '#b0a080';
     c.fillRect(0, 2, 16, 1);
+  });
+
+  // Computer — monitor on a small desk
+  tiles[T.COMPUTER] = makeTile(c => {
+    // Floor base
+    c.fillStyle = '#c8a060';
+    c.fillRect(0, 0, 16, 16);
+    // Desk surface
+    c.fillStyle = '#885830';
+    c.fillRect(1, 8, 14, 2);
+    c.fillStyle = '#a06830';
+    c.fillRect(2, 8, 12, 1);
+    // Desk legs
+    c.fillStyle = '#604020';
+    c.fillRect(2, 10, 2, 6);
+    c.fillRect(12, 10, 2, 6);
+    // Monitor body
+    c.fillStyle = '#353540';
+    c.fillRect(3, 1, 10, 7);
+    // Screen
+    c.fillStyle = '#668da9';
+    c.fillRect(4, 2, 8, 5);
+    // Screen highlight
+    c.fillStyle = '#8bb0ad';
+    c.fillRect(5, 3, 3, 1);
+    c.fillRect(5, 4, 1, 1);
+    // Screen text lines
+    c.fillStyle = '#ede4da';
+    c.fillRect(5, 5, 5, 1);
+    // Monitor stand
+    c.fillStyle = '#353540';
+    c.fillRect(7, 8, 2, 1);
+    // Keyboard
+    c.fillStyle = '#636167';
+    c.fillRect(4, 9, 8, 1);
+    c.fillStyle = '#bfb8b4';
+    c.fillRect(5, 9, 6, 1);
+  });
+
+  // Poster — conference poster on easel stand
+  tiles[T.POSTER] = makeTile(c => {
+    // Floor base
+    c.fillStyle = '#c8a060';
+    c.fillRect(0, 0, 16, 16);
+    // Easel legs
+    c.fillStyle = '#735b42';
+    c.fillRect(4, 10, 1, 6);
+    c.fillRect(11, 10, 1, 6);
+    c.fillRect(7, 12, 1, 4);
+    // Easel cross bar
+    c.fillStyle = '#604b3d';
+    c.fillRect(5, 11, 6, 1);
+    // Poster board (white)
+    c.fillStyle = '#ede4da';
+    c.fillRect(3, 1, 10, 10);
+    // Poster border
+    c.fillStyle = '#5c699f';
+    c.fillRect(3, 1, 10, 1);
+    c.fillRect(3, 10, 10, 1);
+    c.fillRect(3, 1, 1, 10);
+    c.fillRect(12, 1, 1, 10);
+    // Poster title bar
+    c.fillStyle = '#5c699f';
+    c.fillRect(4, 2, 8, 2);
+    // Text lines on poster
+    c.fillStyle = '#636167';
+    c.fillRect(5, 5, 6, 1);
+    c.fillRect(5, 7, 5, 1);
+    c.fillRect(5, 9, 4, 1);
   });
 
   return tiles;

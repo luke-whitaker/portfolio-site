@@ -211,3 +211,118 @@ export function generateNPCSprite(variant) {
     c.fillRect(9, 14, 2, 1);
   });
 }
+
+// Generate a female NPC sprite — variant selects colours
+export function generateFemaleNPCSprite(variant) {
+  const configs = [
+    { shirt: PAL.fnpc0shirt, hair: PAL.fnpc0hair },
+    { shirt: PAL.fnpc1shirt, hair: PAL.fnpc1hair },
+  ];
+  const cfg = configs[variant] || configs[0];
+
+  return makeSprite(c => {
+    // Hair (longer, frames the face)
+    c.fillStyle = cfg.hair;
+    c.fillRect(4, 0, 8, 4);
+    c.fillRect(4, 4, 2, 3);
+    c.fillRect(10, 4, 2, 3);
+
+    // Head
+    c.fillStyle = PAL.skin;
+    c.fillRect(5, 1, 6, 5);
+
+    // Hair top layer
+    c.fillStyle = cfg.hair;
+    c.fillRect(5, 0, 6, 2);
+
+    // Eyes
+    c.fillStyle = PAL.darkest;
+    c.fillRect(6, 3, 1, 1);
+    c.fillRect(9, 3, 1, 1);
+
+    // Body
+    c.fillStyle = cfg.shirt;
+    c.fillRect(4, 6, 8, 5);
+
+    // Arms
+    c.fillStyle = cfg.shirt;
+    c.fillRect(3, 6, 1, 4);
+    c.fillRect(12, 6, 1, 4);
+    // Hands
+    c.fillStyle = PAL.skin;
+    c.fillRect(3, 10, 1, 1);
+    c.fillRect(12, 10, 1, 1);
+
+    // Skirt / pants
+    c.fillStyle = PAL.dark;
+    c.fillRect(4, 11, 8, 2);
+
+    // Legs
+    c.fillStyle = PAL.skin;
+    c.fillRect(5, 13, 2, 1);
+    c.fillRect(9, 13, 2, 1);
+    // Shoes
+    c.fillStyle = PAL.darkest;
+    c.fillRect(5, 14, 2, 1);
+    c.fillRect(9, 14, 2, 1);
+  });
+}
+
+// Generate the Dev Lab NPC — latino male with long brown hair and glasses
+export function generateDevLabNPCSprite() {
+  return makeSprite(c => {
+    // Long hair (flows past shoulders)
+    c.fillStyle = PAL.devHair;
+    c.fillRect(4, 0, 8, 3);
+    c.fillRect(3, 2, 2, 6);
+    c.fillRect(11, 2, 2, 6);
+
+    // Head
+    c.fillStyle = PAL.devSkin;
+    c.fillRect(5, 1, 6, 5);
+
+    // Hair top
+    c.fillStyle = PAL.devHair;
+    c.fillRect(5, 0, 6, 2);
+
+    // Glasses frames
+    c.fillStyle = PAL.devGlasses;
+    c.fillRect(5, 3, 3, 2);
+    c.fillRect(9, 3, 3, 2);
+    c.fillRect(8, 3, 1, 1);
+    // Lenses
+    c.fillStyle = '#8bb0ad';
+    c.fillRect(6, 3, 1, 1);
+    c.fillRect(10, 3, 1, 1);
+    // Eyes behind glasses
+    c.fillStyle = PAL.darkest;
+    c.fillRect(6, 4, 1, 1);
+    c.fillRect(10, 4, 1, 1);
+
+    // Body
+    c.fillStyle = PAL.devShirt;
+    c.fillRect(4, 6, 8, 5);
+
+    // Arms
+    c.fillStyle = PAL.devShirt;
+    c.fillRect(3, 7, 1, 4);
+    c.fillRect(12, 7, 1, 4);
+    // Hands
+    c.fillStyle = PAL.devSkin;
+    c.fillRect(3, 10, 1, 1);
+    c.fillRect(12, 10, 1, 1);
+
+    // Pants
+    c.fillStyle = PAL.dark;
+    c.fillRect(4, 11, 8, 1);
+
+    // Legs
+    c.fillStyle = PAL.dark;
+    c.fillRect(5, 12, 2, 3);
+    c.fillRect(9, 12, 2, 3);
+    // Shoes
+    c.fillStyle = PAL.darkest;
+    c.fillRect(5, 14, 2, 1);
+    c.fillRect(9, 14, 2, 1);
+  });
+}

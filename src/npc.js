@@ -6,27 +6,27 @@ export const NPC_DATA = [
     col: 64, row: 10,
     variant: 0,
     lines: [
-      "Welcome to the Stats Lab!",
-      "Inside you'll find Luke's\nco-authored 2024 research on AI\nin language education.",
-      "Walk through the door\nto read the article!",
+      "This is the Stats Lab.",
+      "Inside you'll find a computer\nrunning Luke's StatLab app.",
+      "Head inside to check it out!",
     ],
   },
   {
     col: 72, row: 10,
     variant: 1,
     lines: [
-      "This is the Ling Lab!",
-      "It houses Luke's MA Thesis —\nan empirical study of French\nsyntax and heritage speakers.",
-      "Head inside to read it!",
+      "Welcome to the Ling Lab.",
+      "Luke's published linguistics\nresearch is on display inside.",
+      "Go in and take a look!",
     ],
   },
   {
     col: 80, row: 10,
     variant: 2,
     lines: [
-      "Welcome to the Dev Lab!",
-      "This is where Luke keeps\nhis software projects —\nstarting with this portfolio site.",
-      "Enter to see the source!",
+      "This is the Dev Lab.",
+      "Luke's software projects\nare showcased inside.",
+      "Head in to see what\nhe's been building!",
     ],
   },
 ];

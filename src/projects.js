@@ -13,57 +13,15 @@ export const PROJECTS = [
   //  doorCol: 42,
   //  doorRow: 9,
   //},
-  {
-    id: 'stats-lab',
-    title: 'The Future of Language Education',
-    subtitle: 'Zimotti, Frances & Whitaker · Technology in Language Teaching & Learning · 2024',
-    description:
-      'A survey of 100+ language teachers on their perceptions of AI writing tools like ChatGPT — ' +
-      'framed as the next evolution of the academic integrity challenges introduced by Google Translate in 2006. ' +
-      'Teachers reported mixed attitudes: concern about job security alongside optimism about the technology\'s potential. ' +
-      'The article offers practical guidance on classroom policy and assignment design for navigating AI in language education. ' +
-      'Role: Co-author & primary Data Analyst.',
-    tags: ['Generative AI', 'CALL', 'Applied Linguistics', 'Data Analysis'],
-    link: 'https://doi.org/10.29140/tltl.v6n2.1136',
-    linkText: 'Read Article',
-    doorCol: 66,
-    doorRow: 9,
-  },
-  {
-    id: 'ling-lab',
-    title: 'French Interrogatives in Context',
-    subtitle: 'MA Thesis · University of Iowa · 2021',
-    description:
-      'An empirical study examining whether Heritage French speakers are as sensitive as native speakers ' +
-      'to the social and contextual factors that govern different question forms in French. ' +
-      'Participants judged the acceptability of interrogative structures across formal and informal registers, ' +
-      'revealing nuanced patterns in how heritage speakers navigate syntactic variation in their non-dominant language.',
-    tags: ['Syntax', 'Discourse', 'French', 'Heritage Linguistics'],
-    link: 'https://iro.uiowa.edu/esploro/outputs/graduate/French-interrogatives-in-context/9984096974302771',
-    linkText: 'Read Thesis',
-    doorCol: 74,
-    doorRow: 9,
-  },
-  {
-    id: 'dev-lab',
-    title: 'Our Place',
-    subtitle: 'Next.js · TypeScript · SQLite · 2025–present',
-    description:
-      'A community forum and social platform built on trust, belonging, and genuine connection. ' +
-      'Features communities, rich posts, comments, reactions, events, and personal profiles — ' +
-      'plus an 8-bit RPG overworld where each community is a building in a town. ' +
-      'Think Roblox meets Reddit, but pixel art. The game engine was inspired by this very portfolio site.',
-    tags: ['Next.js', 'TypeScript', 'SQLite', 'Game Design'],
-    link: 'https://github.com/luke-whitaker/our-place',
-    linkText: 'View on GitHub',
-    doorCol: 82,
-    doorRow: 9,
-  },
+  // Labs now have interiors — their doors are in MAP_DOORS below
 ];
 
 // Doors that trigger a map transition instead of an overlay
 export const MAP_DOORS = [
   { doorCol: 42, doorRow: 9, targetMap: 'home' },
+  { doorCol: 66, doorRow: 9, targetMap: 'stats-lab' },
+  { doorCol: 74, doorRow: 9, targetMap: 'ling-lab' },
+  { doorCol: 82, doorRow: 9, targetMap: 'dev-lab' },
 ];
 
 // Check if a tile is a map-transition door

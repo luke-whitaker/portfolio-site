@@ -59,11 +59,11 @@ export const HOME_DESK = {
   col: 12, row: 3,
   link: 'https://luke-whitaker.github.io/portfolio-site/resume.pdf', // LINK TO RESUME
   lines: [
-    "[ Luke's Desk ]\nThree labs are just outside to the East.\nEach one holds different work.",
-      "Stats Lab (1st door on the right):\nCo-authored research on AI\nin language education. (2024)",
-      "Ling Lab (2nd door):\nMA Thesis on French syntax\nand heritage speakers. (2021)",
-      "Dev Lab (3rd door):\nThis portfolio site and\nfuture dev projects.",
-      "[ Luke's resume ]\nClick the link below to open Luke's resume in a new tab.",
+    "[ Luke's Desk ]\nThree labs are just outside\nto the East. Each one holds\ndifferent work.",
+    "Stats Lab (1st door):\nLuke's StatLab app — a\nbrowser-based stats tool.",
+    "Ling Lab (2nd door):\nLuke's published research —\nMA Thesis and co-authored\narticle on AI in education.",
+    "Dev Lab (3rd door):\nLuke's software projects —\nStatLab and Our Place.",
+    "[ Luke's resume ]\nClick the link below to open\nLuke's resume in a new tab.",
   ],
 };
 

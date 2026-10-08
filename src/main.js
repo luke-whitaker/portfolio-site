@@ -68,6 +68,7 @@ state.interiorNPCs = [
     sprite: null,
     lines: HOME_DESK.lines,
     link: HOME_DESK.link,
+    linkText: HOME_DESK.linkText,
     lineIndex: 0,
   },
 ];
@@ -94,6 +95,7 @@ state.statsLabNPCs = [
     sprite: null,
     lines: STATS_LAB_COMPUTER.lines,
     link: STATS_LAB_COMPUTER.link,
+    linkText: STATS_LAB_COMPUTER.linkText,
     lineIndex: 0,
   },
 ];
@@ -120,6 +122,7 @@ state.lingLabNPCs = [
     sprite: null,
     lines: LING_LAB_POSTER_1.lines,
     link: LING_LAB_POSTER_1.link,
+    linkText: LING_LAB_POSTER_1.linkText,
     lineIndex: 0,
   },
   {
@@ -128,6 +131,7 @@ state.lingLabNPCs = [
     sprite: null,
     lines: LING_LAB_POSTER_2.lines,
     link: LING_LAB_POSTER_2.link,
+    linkText: LING_LAB_POSTER_2.linkText,
     lineIndex: 0,
   },
 ];
@@ -154,6 +158,7 @@ state.devLabNPCs = [
     sprite: null,
     lines: DEV_LAB_COMPUTER.lines,
     links: DEV_LAB_COMPUTER.links,
+    linkTexts: DEV_LAB_COMPUTER.linkTexts,
     lineIndex: 0,
   },
 ];
@@ -334,8 +339,12 @@ function update() {
     const pageLink = d.npc.links
       ? d.npc.links[d.npc.lineIndex]
       : (d.npc.link && isLastLine ? d.npc.link : null);
+    const pageLinkText = d.npc.linkTexts
+      ? d.npc.linkTexts[d.npc.lineIndex]
+      : d.npc.linkText;
     if (pageLink && d.charIndex >= fullText.length) {
       dialogueLink.href = pageLink;
+      dialogueLink.textContent = `${pageLinkText || 'Open Link'} ↗`;
       dialogueLink.classList.remove('hidden');
     } else {
       dialogueLink.classList.add('hidden');

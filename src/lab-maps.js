@@ -59,6 +59,7 @@ export const STATS_LAB_COMPUTER = {
     "Click the link below\nto open StatLab.",
   ],
   link: 'https://dynamic-spirit-production-91a5.up.railway.app/',
+  linkText: 'Open StatLab',
 };
 
 // ──────────────────────────────────────
@@ -108,6 +109,7 @@ export const LING_LAB_POSTER_1 = {
     "Click below to read\nthe full thesis.",
   ],
   link: 'https://iro.uiowa.edu/esploro/outputs/graduate/French-interrogatives-in-context/9984096974302771',
+  linkText: 'Read Thesis',
 };
 
 export const LING_LAB_POSTER_2 = {
@@ -118,6 +120,7 @@ export const LING_LAB_POSTER_2 = {
     "Role: Co-author &\nprimary Data Analyst.\nClick below to read\nthe article.",
   ],
   link: 'https://doi.org/10.29140/tltl.v6n2.1136',
+  linkText: 'Read Article',
 };
 
 // ──────────────────────────────────────
@@ -170,6 +173,7 @@ export const DEV_LAB_COMPUTER = {
     'https://dynamic-spirit-production-91a5.up.railway.app/',
     'https://github.com/luke-whitaker/our-place',
   ],
+  linkTexts: [null, 'Open StatLab', 'View on GitHub'],
 };
 
 // ──────────────────────────────────────

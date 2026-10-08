@@ -58,6 +58,7 @@ export const HOME_SPAWN = { col: 7, row: 7 };
 export const HOME_DESK = {
   col: 12, row: 3,
   link: 'https://github.com/luke-whitaker/portfolio-site/blob/main/Luke-Whitaker-Resume-2026.pdf', // LINK TO RESUME
+  linkText: 'Open Resume',
   lines: [
     "[ Luke's Desk ]\nThree labs are just outside\nto the East. Each one holds\ndifferent work.",
     "Stats Lab (1st door):\nLuke's StatLab app — a\nbrowser-based stats tool.",

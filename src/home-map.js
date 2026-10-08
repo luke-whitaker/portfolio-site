@@ -57,7 +57,7 @@ export const HOME_SPAWN = { col: 7, row: 7 };
 // Desk position inside home (right-side table, col 12 row 3)
 export const HOME_DESK = {
   col: 12, row: 3,
-  link: 'https://luke-whitaker.github.io/portfolio-site/resume.pdf', // LINK TO RESUME
+  link: 'https://github.com/luke-whitaker/portfolio-site/blob/main/Luke-Whitaker-Resume-2026.pdf', // LINK TO RESUME
   lines: [
     "[ Luke's Desk ]\nThree labs are just outside\nto the East. Each one holds\ndifferent work.",
     "Stats Lab (1st door):\nLuke's StatLab app — a\nbrowser-based stats tool.",
